@@ -1,0 +1,14 @@
+{
+  "name": "jest-simple-reporter",
+  "version": "0.1.0",
+  "description": "Predictable simple format Jest reporter",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Rich Churcher",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "jest": "^21.2.1"
+  }
+}

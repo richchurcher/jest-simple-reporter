@@ -9,6 +9,12 @@
   "author": "Rich Churcher",
   "license": "Apache-2.0",
   "dependencies": {
+    "babel-preset-env": "^1.6.1"
+  },
+  "devDependencies": {
     "jest": "^21.2.1"
+  },
+  "babel": {
+    "presets": [ "env" ]
   }
 }

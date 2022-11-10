@@ -2,10 +2,10 @@
 
 exports[`onTestResult matches the last snapshot for a failing test 1`] = `
 "
-/home/basie/foo/mobile/src/components/FlargleArgle/FlargleArgle.test.js:74:3:E:Expected mock function not to be called but it was called with: Array [] "
+src/components/FlargleArgle/FlargleArgle.test.js:74:3:E:Expected mock function not to be called but it was called with: Array [] "
 `;
 
 exports[`onTestResult matches the last snapshot for a passsing test 1`] = `
 "
-/foo/bar/wombat:::I:Flargle:Works as expected"
+foo/bar/wombat:::I:Flargle:Works as expected"
 `;

@@ -1,3 +1,5 @@
+const path = require('path');
+
 class JestSimpleReporter {
   constructor (globalConfig, options) {
     this._globalConfig = globalConfig
@@ -28,15 +30,15 @@ class JestSimpleReporter {
               const loc = trace.substring(
                 trace.indexOf('(') + 1,
                 trace.indexOf(')') - 1
-              )
+              ).split(':')
 
-              console.log(`${firstNewline}${loc}:${translatedStatus}:${message}`)
+              console.log(`${firstNewline}${path.relative('./', loc[0])}:${loc.slice(-2).join(':')}:${translatedStatus}:${message}`)
             }
           })
           break
 
         case 'passed':
-          console.log(`${firstNewline}${testFilePath}:::${translatedStatus}:${ancestorTitles.join(' > ')}:${title}`)
+          console.log(`${firstNewline}${path.relative('./', testFilePath)}:::${translatedStatus}:${ancestorTitles.join(' > ')}:${title}`)
           break
       }
       if (this._first) this._first = false
